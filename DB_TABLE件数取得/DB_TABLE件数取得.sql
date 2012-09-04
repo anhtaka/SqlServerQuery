@@ -3,6 +3,8 @@ DECLARE @DBName nvarchar(100)
 DECLARE @UserName nvarchar(100)
 DECLARE @SQL nvarchar(2000)
 
+-- 実行結果を格納する
+
 
 -- DB名を取得する
 DECLARE DB_CUR CURSOR FOR SELECT db_name(s_mf.database_id) DBNAME 
