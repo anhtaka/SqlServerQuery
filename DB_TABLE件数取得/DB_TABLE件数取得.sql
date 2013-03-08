@@ -4,17 +4,7 @@ DECLARE @UserName nvarchar(100)
 DECLARE @SQL nvarchar(2000)
 
 -- 実行結果を格納する
-CREATE table #DB_COUNT (
-	 [DB]         NVARCHAR(10)
-	,[OWN]         NVARCHAR(20)
-	,[TABLE_NAME]  NVARCHAR(100)
-	,[COUNT] DECIMAL(15)
-	PRIMARY KEY(
-	 [DB]        
-	,[OWN]        
-	,[TABLE_NAME]  
-	)
-)
+
 
 -- DB名を取得する
 DECLARE DB_CUR CURSOR FOR SELECT db_name(s_mf.database_id) DBNAME 
@@ -23,7 +13,6 @@ where
     s_mf.state = 0 and -- ONLINE
     has_dbaccess(db_name(s_mf.database_id)) = 1 and-- Only look at databases to which we have access
     db_name(s_mf.database_id) <> 'tempdb'
-
 group by s_mf.database_id
 order by 1
 
@@ -50,7 +39,7 @@ FETCH NEXT FROM TABLE_CUR INTO @TableName,@UserName;
 WHILE (@@FETCH_STATUS = 0 )
 BEGIN
 -- 各テーブルから件数を取得する
-	set @SQL = 'INSERT INTO #DB_COUNT SELECT '''+@DBName+''' DB ,'''+@UserName+''' OWN ,'''+@TableName+''' TABLE_NAME ,COUNT(*) AS [COUNT] FROM ['+@DBName+'].['+@UserName+'].' + @TableName;
+	set @SQL = 'SELECT '''+@DBName+''' DB ,'''+@UserName+''' OWN ,'''+@TableName+''' TABLE_NAME ,COUNT(*) AS [COUNT] FROM ['+@DBName+'].['+@UserName+'].' + @TableName;
 	EXEC  sp_executesql @SQL;
 	FETCH NEXT FROM TABLE_CUR INTO @TableName,@UserName;
 END;
@@ -63,5 +52,3 @@ END;
 CLOSE DB_CUR;
 DEALLOCATE DB_CUR;
 
-select * from #DB_COUNT where [COUNT] <> 0
-drop table #DB_COUNT
