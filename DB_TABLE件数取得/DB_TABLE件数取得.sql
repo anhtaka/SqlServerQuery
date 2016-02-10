@@ -5,7 +5,7 @@ DECLARE @SQL nvarchar(2000)
 
 -- 実行結果を格納する
 CREATE table #DB_COUNT (
-	 [DB]         NVARCHAR(10)
+	 [DB]         NVARCHAR(100)
 	,[OWN]         NVARCHAR(20)
 	,[TABLE_NAME]  NVARCHAR(100)
 	,[COUNT] DECIMAL(15)
