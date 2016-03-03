@@ -1,4 +1,4 @@
-/*ƒWƒ‡ƒuˆê——‚Ìæ“¾*/
+/*ã‚¸ãƒ§ãƒ–ä¸€è¦§ã®å–å¾—*/
 select s.name,s.description,l.name
  from  msdb..sysjobs s 
  left join master.sys.syslogins l on s.owner_sid = l.sid
