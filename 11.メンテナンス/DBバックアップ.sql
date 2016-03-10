@@ -1,0 +1,3 @@
+BACKUP DATABASE [DB_name] TO  DISK = N'C:\Microsoft SQL Server\BACKUP\DB.bak' WITH NOFORMAT, INIT,  NAME = N'-完全 データベース バックアップ', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO
+

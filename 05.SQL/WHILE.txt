@@ -1,0 +1,9 @@
+declare @LoopCount decimal(10,0)
+set @LoopCount =1
+WHILE(@LoopCount < 10)
+BEGIN	
+SET @LoopCount = @LoopCount + 1	
+SELECT @LoopCount
+END
+
+SELECT @LoopCount

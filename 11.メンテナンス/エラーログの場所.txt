@@ -1,0 +1,11 @@
+SQL Server エラー ログは、
+SQL Server Management Studio または任意のテキスト エディタを使用して表示します。
+
+エラー ログの既定の場所は、 
+	Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG ファイル
+	および 
+	ERRORLOG.nSQL Server エラー ログは、
+	SQL Server Management Studio または任意のテキスト エディタを使用して表示します。
+
+エラー ログの既定の場所は、 
+	Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG ファイルおよび ERRORLOG.n

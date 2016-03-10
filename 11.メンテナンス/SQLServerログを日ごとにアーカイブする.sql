@@ -1,0 +1,2 @@
+--SQLServerログを日ごとにアーカイブする
+EXEC sp_cycle_errorlog

@@ -1,0 +1,22 @@
+
+
+declare @AMT decimal(10,3)
+set @AMT = 120.000
+select @AMT,CONVERT(decimal(10,3),FLOOR(@AMT))
+
+--select CONVERT(decimal(10,3),11)
+
+select CASE WHEN @AMT = FLOOR(@AMT) THEN CONVERT(nvarchar,FLOOR(ISNULL(@AMT,0))) ELSE CONVERT(nvarchar,ISNULL(@AMT,0)) END
+
+
+------------------------------------------------------
+select 
+CASE WHEN @AMT = FLOOR(@AMT) THEN CONVERT(NVARCHAR,FLOOR(ISNULL(@AMT,0))) 
+ELSE
+	CASE WHEN @AMT = [R_1_1_0_CM].[dbo].[CM_MS_GetRound](ISNULL(@AMT,0),1,'C') THEN LEFT(CONVERT(NVARCHAR,ISNULL(@AMT,0)),len(CONVERT(NVARCHAR,ISNULL(@AMT,0)))-2)
+	ElSE 
+		CASE WHEN @AMT = [R_1_1_0_CM].[dbo].[CM_MS_GetRound](ISNULL(@AMT,0),2,'C') THEN LEFT(CONVERT(NVARCHAR,ISNULL(@AMT,0)),len(CONVERT(NVARCHAR,ISNULL(@AMT,0)))-1)
+		ELSE
+		CONVERT(NVARCHAR,ISNULL(@AMT,0)) END
+	END
+END
