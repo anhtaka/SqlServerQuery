@@ -1,0 +1,18 @@
+SELECT 
+    [Extent1].[No] AS [No], 
+    [Extent1].[新規登録日] AS [新規登録日], 
+    [Extent1].[最終更新日] AS [最終更新日], 
+    [Extent1].[ユニット] AS [ユニット]
+    FROM [dbo].[Pathinfolists] AS [Extent1]
+    ORDER BY [Extent1].[No] ASC
+    OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY 
+
+
+	SELECT 
+    [Extent1].[No] AS [No], 
+    [Extent1].[新規登録日] AS [新規登録日], 
+    [Extent1].[最終更新日] AS [最終更新日], 
+    [Extent1].[ユニット] AS [ユニット]
+    FROM [dbo].[Pathinfolists] AS [Extent1]
+    ORDER BY [Extent1].[No] ASC
+    OFFSET 15 ROWS FETCH NEXT 10 ROWS ONLY 
