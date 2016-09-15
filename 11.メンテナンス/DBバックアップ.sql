@@ -1,3 +1,3 @@
-BACKUP DATABASE [DB_name] TO  DISK = N'C:\Microsoft SQL Server\BACKUP\DB.bak' WITH NOFORMAT, INIT,  NAME = N'-Š®‘S ƒf[ƒ^ƒx[ƒX ƒoƒbƒNƒAƒbƒv', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+BACKUP DATABASE [DB_name] TO  DISK = N'C:\Microsoft SQL Server\BACKUP\DB.bak' WITH NOFORMAT, INIT,  NAME = N'-å®Œå…¨ ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—', SKIP, NOREWIND, NOUNLOAD,COMPRESSION,  STATS = 10
 GO
 
