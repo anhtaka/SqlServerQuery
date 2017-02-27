@@ -50,7 +50,7 @@ FETCH NEXT FROM TABLE_CUR INTO @TableName,@UserName;
 WHILE (@@FETCH_STATUS = 0 )
 BEGIN
 -- 各テーブルから件数を取得する
-	set @SQL = 'INSERT INTO #DB_COUNT SELECT '''+@DBName+''' DB ,'''+@UserName+''' OWN ,'''+@TableName+''' TABLE_NAME ,COUNT(*) AS [COUNT] FROM ['+@DBName+'].['+@UserName+'].' + @TableName;
+	set @SQL = 'INSERT INTO #DB_COUNT SELECT '''+@DBName+''' DB ,'''+@UserName+''' OWN ,'''+@TableName+''' TABLE_NAME ,COUNT(*) AS [COUNT] FROM ['+@DBName+'].['+@UserName+'].[' + @TableName + ']';
 	EXEC  sp_executesql @SQL;
 	FETCH NEXT FROM TABLE_CUR INTO @TableName,@UserName;
 END;
