@@ -1,0 +1,7 @@
+/* dts List Server Packages */
+SELECT DISTINCT name,[description] FROM sysdtspackages
+
+
+/* JOB List
+EXEC msdb.dbo.sp_help_job;
+GO
