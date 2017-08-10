@@ -2,6 +2,6 @@
 SELECT DISTINCT name,[description] FROM sysdtspackages
 
 
-/* JOB List
+/* JOB List */
 EXEC msdb.dbo.sp_help_job;
 GO
