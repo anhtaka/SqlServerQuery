@@ -1,9 +1,9 @@
 
-¡•¶Žš‚©‚ç”Žš
+--â– æ–‡å­—ã‹ã‚‰æ•°å­—
 select CONVERT(int,'0000000010')+1
 
-¡”Žš‚©‚ç•¶Žš
+--â– æ•°å­—ã‹ã‚‰æ–‡å­—
 select '000000000'+CONVERT(nvarchar,11)
 
-¡•¶Žš—ñ‚Ìˆê•”‚ÌŽæ“¾
+--â– æ–‡å­—åˆ—ã®ä¸€éƒ¨ã®å–å¾—
 select SUBSTRING(name2,5000,30),* from dbo.Table_1
