@@ -26,6 +26,9 @@ http://t-wata.com/?p=221
 
 3.SQL Server Profiler
  Deadlock Graph を取得するため、「Events」列の「Locks」-「Deadlock Graph」にチェックを入れます。
-
-
+　http://d.hatena.ne.jp/seki-moto/20101117/DeadLock
+ 
+ 
+参考資料
 http://dalmore.blog7.fc2.com/blog-entry-154.html
+
