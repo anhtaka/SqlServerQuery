@@ -63,7 +63,7 @@ END;
 CLOSE DB_CUR;
 DEALLOCATE DB_CUR;
 
-select * from #DB_COUNT where [COUNT] > 1 
+select * from #DB_COUNT where [COUNT] >= 1 
 order by COUNT desc
 
 drop table #DB_COUNT
